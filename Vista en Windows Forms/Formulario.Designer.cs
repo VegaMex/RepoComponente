@@ -23,6 +23,7 @@
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario));
             this.editorTexto1 = new Biblioteca_de_Controles.EditorTexto();
             this.txt_CajaTexto = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
@@ -51,9 +52,10 @@
             this.ClientSize = new System.Drawing.Size(560, 257);
             this.Controls.Add(this.txt_CajaTexto);
             this.Controls.Add(this.editorTexto1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Formulario";
-            this.Text = "Vista";
+            this.Text = "Notas";
             this.Load += new System.EventHandler(this.Formulario_Load);
             this.ResumeLayout(false);
 

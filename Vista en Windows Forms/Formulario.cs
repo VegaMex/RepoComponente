@@ -15,17 +15,38 @@ namespace Vista_en_Windows_Forms {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Establece el valor del objeto RichTextBox del componente
+        /// al valor del RichTextBox del formulario al momento de
+        /// cargar el componente en el formulario.
+        /// </summary>
         private void editorTexto1_Load(object sender, EventArgs e) {
             editorTexto1.Caja = txt_CajaTexto;
         }
 
+        /// <summary>
+        /// Envía mensajes de existencia o no existencia
+        /// de un archivo de texto color.txt en C: al momento
+        /// de cargar el formulario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Formulario_Load(object sender, EventArgs e) {
-            TomarColor fondo = new TomarColor();
 
+            //Objeto de la clase TomarColor
+            TomarColor fondo = new TomarColor();
+            
             if (fondo.existencia()) {
                 if (fondo.comprobarColor()) {
+
+                    //Se convierte la cadena de color haxadecimal de la
+                    //variable pública colorfinal de la clase TomarColor
+                    //en un objeto de tipo Color.
                     Color fondocolor = System.Drawing.ColorTranslator.FromHtml(fondo.colorfinal);
+
+                    //Se asigna objeto de tipo Color al color de fondo del formulario.
                     this.BackColor = fondocolor;
+
                 } else {
                     MessageBox.Show("La primera línea del archivo C:\\color.txt\n" +
                    "no corresponde con un código de color hexadecimal.\n\n" +
