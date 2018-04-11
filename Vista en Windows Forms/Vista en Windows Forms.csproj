@@ -78,6 +78,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Biblioteca de Clases\Biblioteca de Clases.csproj">
+      <Project>{b1745838-a5f8-4aa3-bacb-df2aba9903c9}</Project>
+      <Name>Biblioteca de Clases</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Biblioteca de Controles\Biblioteca de Controles.csproj">
       <Project>{c4ad4f38-fc5c-415d-a3ea-feeb477f326f}</Project>
       <Name>Biblioteca de Controles</Name>

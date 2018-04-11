@@ -54,6 +54,7 @@
             this.MaximizeBox = false;
             this.Name = "Formulario";
             this.Text = "Vista";
+            this.Load += new System.EventHandler(this.Formulario_Load);
             this.ResumeLayout(false);
 
         }
