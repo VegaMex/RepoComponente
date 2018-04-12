@@ -9,6 +9,9 @@ using System.Drawing;
 
 namespace Biblioteca_de_Clases
 {
+    /// <summary>
+    /// Clase con métodos para verificación.
+    /// </summary>
     public class TomarColor
     {
         /// <summary>
@@ -42,7 +45,7 @@ namespace Biblioteca_de_Clases
                 string color;
                 color = lector.ReadLine();
 
-                if (Regex.IsMatch(color, "(#)([0-9]|[A-F]){6}")) {
+                if (Regex.IsMatch(color, "((#)([0-9]|[A-F]){6})|((#)([0-9]|[a-f]){6})")) {
                     colorfinal = color;
                     lector.Close();
                     return true;
